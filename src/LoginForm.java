@@ -286,7 +286,8 @@ public class LoginForm extends javax.swing.JFrame {
                 if(username.getText().equals(rs.getString("username"))&& password.getText().equals(rs.getString("password"))){
                 JOptionPane.showMessageDialog(null, "Berhasil Login");
                 this.setVisible(true);
-                new Menu().setVisible(true);
+                new DashboardAdmin().setVisible(true);
+                this.dispose();
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Username atau Password salah");

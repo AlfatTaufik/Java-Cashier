@@ -12,11 +12,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class LoginForm extends javax.swing.JFrame {
+public class LoginFormCashier extends javax.swing.JFrame {
 
 //    variable position
     int xx, xy;
-    public LoginForm() {
+    public LoginFormCashier() {
         initComponents();
     }
     
@@ -160,7 +160,7 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Microsoft YaHei", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 153));
-        jLabel3.setText("Silahkan Isi Form Berikut :");
+        jLabel3.setText("Halo Cashier, Login Dulu !");
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/arrow-previous-ltr_.png"))); // NOI18N
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -278,7 +278,7 @@ public class LoginForm extends javax.swing.JFrame {
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         // TODO add your handling code here:
         try {
-            String sql = "SELECT * FROM admin where username ='" + username.getText() + "'AND password ='" + password.getText()+ "'";
+            String sql = "SELECT * FROM cashier where username ='" + username.getText() + "'AND Password ='" + password.getText()+ "'";
             java.sql.Connection conn = (Connection)config.configDB();
             java.sql.PreparedStatement pst = conn.prepareStatement(sql);
             java.sql.ResultSet rs = pst.executeQuery(sql);
@@ -286,7 +286,8 @@ public class LoginForm extends javax.swing.JFrame {
                 if(username.getText().equals(rs.getString("username"))&& password.getText().equals(rs.getString("password"))){
                 JOptionPane.showMessageDialog(null, "Berhasil Login");
                 this.setVisible(true);
-                new Menu().setVisible(true);
+                new DashboardAdmin().setVisible(true);
+                this.dispose();
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Username atau Password salah");

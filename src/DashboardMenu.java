@@ -34,7 +34,7 @@ public class DashboardMenu extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         btn_exit = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnAdmin = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -85,15 +85,15 @@ public class DashboardMenu extends javax.swing.JFrame {
         });
         jPanel1.add(btn_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(153, 255, 255));
-        jButton1.setText("Admin");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAdmin.setBackground(new java.awt.Color(153, 255, 255));
+        btnAdmin.setText("Admin");
+        btnAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAdminActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 200, 105, 29));
+        jPanel1.add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 200, 105, 29));
 
         jButton2.setBackground(new java.awt.Color(102, 255, 255));
         jButton2.setText("Cashier");
@@ -142,13 +142,13 @@ public class DashboardMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminActionPerformed
         // TODO add your handling code here:
         LoginForm loginForm = new LoginForm();
-        loginForm.setVisible(true);
+    loginForm.setVisible(true);
         this.dispose();
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAdminActionPerformed
 
     private void jPanel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseDragged
         // TODO add your handling code here:
@@ -170,7 +170,7 @@ public class DashboardMenu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        LoginForm loginPage = new LoginForm();
+        LoginFormCashier loginPage = new LoginFormCashier();
         loginPage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -211,8 +211,8 @@ public class DashboardMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdmin;
     private javax.swing.JLabel btn_exit;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel3;
